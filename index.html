@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download PDF</title>
+</head>
+<body>
+    <h1>Click the Button to Download PDF</h1>
+    <!-- Button to trigger PDF download -->
+    <button id="downloadBtn">Download PDF</button>
+
+    <script>
+        // Add an event listener to the button
+        document.getElementById('downloadBtn').addEventListener('click', function () {
+            // Trigger the download by creating an anchor tag programmatically
+            const link = document.createElement('a');
+            link.href = 'sample.pdf'; // Use the relative path to the PDF file
+            link.download = 'sample.pdf'; // Optional: Set a custom name for the downloaded file
+            link.click(); // Simulate a click to start the download
+        });
+    </script>
+</body>
+</html>
